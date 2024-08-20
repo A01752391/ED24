@@ -8,14 +8,24 @@
 using namespace std;
 
 int sumaIterativa(int n){
-    int suma = 0;
+    int suma = 0; 
     
-    for (int i = 1; i <= n; ++i) {
+    for (int i = 1; i <= n; ++i) { 
         suma += i;  // Suma cada número desde 1 hasta n
     }
     
     return suma; 
 }
+
+/* OE           ||   P
+    1           ||  1(1) Inicialización de la suma
+    1 + 1 + 1   ||  1(1)+1(n+1)+1(n) Bucle FOR
+    1 + 1 + 1   ||  1(n)+1(n)+1(n) Suma de cada número
+    1           ||  1(1) Return
+
+    T(n) = 1 + 1 + n + 1 + n + 3n + 1 = 5n + 4
+    O(n) = n
+*/
 
 int main(){
     int num;

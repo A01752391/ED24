@@ -20,6 +20,16 @@ int sumaRecursiva(int n){
     }
 }
 
+/* OE           ||   P
+    1           ||  1(n) Comparación del IF
+    1           ||  1(1) Return
+    1 + 1       ||  1(n) + 1(n) Suma 
+    1           ||  1(n) Return
+
+    T(n) = n + 1 + 2n + n = 4n + 1
+    O(n) = n
+*/
+
 int main(){
     int num;
     

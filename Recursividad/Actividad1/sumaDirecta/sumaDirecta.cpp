@@ -13,6 +13,14 @@ int sumaDirecta(int n){
     
 }
 
+/* OE           ||   P
+    1 + 1 + 1   || 1(n) + 1(n) + 1(n) Operación para suma
+    1           || 1(1) Return
+
+    T(n) = 3n + 1
+    O(n) = n
+*/
+
 int main(){
     int num;
     
