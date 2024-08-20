@@ -1,35 +1,37 @@
 // Miranda Urban Solano A01752391
 // 20 de agosto de 2024
 
-// Calcular la sumatoria de 1 hasta n con un método iterativo.
+// Calcular la sumatoria de 1 hasta n con un método recursivo.
 
 
 #include <iostream>
 using namespace std;
 
-int sumaIterativa(int n){
-    int suma = 0;
-    
-    for (int i = 1; i <= n; ++i) {
-        suma += i;  // Suma cada número desde 1 hasta n
+int sumaRecursiva(int n){
+
+    // Condición de parada
+    if (n == 0){
+        return 0;
     }
-    
-    return suma; 
+
+    // Invocación recursiva
+    else{
+        return n + sumaRecursiva(n-1); // El número actual más la suma del resto
+    }
 }
 
 int main(){
     int num;
     
-
     do {
         cout << "Ingrese un numero positivo: " ;
         cin >> num;
     }
     while (num <= 0);
 
-    int resultado = sumaIterativa(num);
+    int resultado = sumaRecursiva(num);
 
-    cout << "Este es el resultado de la suma iterativa: " << resultado << endl;
+    cout << "Este es el resultado de la suma: " << resultado << endl;
 
   return 0;
 };

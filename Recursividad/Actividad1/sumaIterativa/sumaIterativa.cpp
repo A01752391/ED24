@@ -20,7 +20,6 @@ int sumaIterativa(int n){
 int main(){
     int num;
     
-
     do {
         cout << "Ingrese un numero positivo: " ;
         cin >> num;
