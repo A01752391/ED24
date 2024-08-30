@@ -18,7 +18,11 @@ int sumaDirecta(int n){
     1           || 1(1) Return
 
     T(n) = 3n + 1
-    O(n) = n
+    
+    Variables en la función para det. espacio en memoria
+    1 ||
+
+    S(n) =
 */
 
 int main(){

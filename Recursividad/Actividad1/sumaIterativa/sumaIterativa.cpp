@@ -17,14 +17,24 @@ int sumaIterativa(int n){
     return suma; 
 }
 
-/* OE           ||   P
+/* OE           ||  P
     1           ||  1(1) Inicialización de la suma
-    1 + 1 + 1   ||  1(1)+1(n+1)+1(n) Bucle FOR
-    1 + 1 + 1   ||  1(n)+1(n)+1(n) Suma de cada número
+    1 + 1 + 1   ||  1(1) + 1(n+1) + 1(n) Bucle FOR
+    1 + 1       ||  1(n) + 1(n) Suma de cada número
     1           ||  1(1) Return
 
-    T(n) = 1 + 1 + n + 1 + n + 3n + 1 = 5n + 4
-    O(n) = n
+    T(n) = 1 + 1 + n + 1 + n + 2n + 1 
+         = 4n + 4
+         = O(n)
+
+    Variables en la función para det. espacio en memoria
+    1 || Var. ini. suma
+    1 || Var i del ciclo for
+    1 || Var n del ciclo for
+
+    S(n) = 1 + 1 + 1
+         = 3
+         = O(1)
 */
 
 int main(){

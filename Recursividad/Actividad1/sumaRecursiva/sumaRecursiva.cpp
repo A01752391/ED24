@@ -20,14 +20,20 @@ int sumaRecursiva(int n){
     }
 }
 
-/* OE           ||   P
+/* OE           ||  P
     1           ||  1(n) Comparación del IF
     1           ||  1(1) Return
-    1 + 1       ||  1(n) + 1(n) Suma 
-    1           ||  1(n) Return
+    1 + 1       ||  3(n-1) Return y suma 
 
-    T(n) = n + 1 + 2n + n = 4n + 1
-    O(n) = n
+    T(n) = n + 1 + 3n - 3
+         = 4n - 2
+         = O(n)
+
+    Variables en la función para det. espacio en memoria
+    1 || Var. n || n
+
+    S(n) = 1 * n
+         = O(n)
 */
 
 int main(){
