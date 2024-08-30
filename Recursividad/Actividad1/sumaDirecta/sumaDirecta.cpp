@@ -13,16 +13,17 @@ int sumaDirecta(int n){
     
 }
 
-/* OE           ||   P
-    1 + 1 + 1   || 1(n) + 1(n) + 1(n) Operación para suma
-    1           || 1(1) Return
+/* OE               ||   P
+    1 + 1 + 1 + 1   || 1(1) + 1(1) + 1(1)+ 1(1) Operación para suma
 
-    T(n) = 3n + 1
+    T(n) = 4
+         = O(1)
     
     Variables en la función para det. espacio en memoria
-    1 ||
+    1 || Var. n
 
-    S(n) =
+    S(n) = 1
+         = O(1)
 */
 
 int main(){
