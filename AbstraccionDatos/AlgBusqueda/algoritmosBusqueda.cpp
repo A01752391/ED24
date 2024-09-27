@@ -1,9 +1,20 @@
 #include <iostream>
+#include <cstdlib>
+#include <random>
 using namespace std;
 
-void generar_array(int* array, int size) {
+template<typename T>
+void generar_array(T* array, int size) {
     for (int i = 0; i < size; ++i) {
-        array[i] = i;
+        array[i] = i * rand() % 100;
+    }
+
+    for (int i = 0; i < size; i++){
+    for (int j = size-1; j > i; j--){
+        if (array[j-1] > array[j]) {
+            swap(array[j - 1], array[j]);
+        }
+    }
     }
 }
 
@@ -58,10 +69,14 @@ int main(int argc, char *argv[]) {
     }
 
     // Establecer el orden de los parámetros y variables
-    int numero = atoi(argv[1]); // Convertir a integer
+    int numero = atof(argv[1]); // Convertir a integer
     char algoritmo = *(argv[2]);
     int elementos = atoi(argv[3]);
     int encontrado; // Salir del programa cuando se encuentre
+
+    /* srand((unsigned int) time(NULL)); 
+    Genera una semilla diferente para el rand, por eso no se uso.
+    Se esperaba tener un arreglo "random" idéntico para las comparaciones*/
 
     int* array = new int[elementos];
     generar_array(array, elementos);
